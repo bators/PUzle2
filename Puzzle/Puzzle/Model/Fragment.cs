@@ -19,12 +19,19 @@ namespace Puzzle.Model
         {
             get
             {
+
                 return _ind;
             }
             set
             {
-                _ind=value;
+                if (_ind != value)
+                {
+                    _ind = value;
+                    RaisePropertyChanged("ind");
+
+                }
             }
+
         }
 
  

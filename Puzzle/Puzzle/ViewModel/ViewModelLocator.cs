@@ -16,6 +16,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
 using Puzzle.Model;
+using Puzzle.Model.Interface;
 
 namespace Puzzle.ViewModel
 {
@@ -45,6 +46,7 @@ namespace Puzzle.ViewModel
             SimpleIoc.Default.Register<Drop>();
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<Fragment>();
+            SimpleIoc.Default.Register<AbstractBridge>();
         }
         public Drop drop
         {
@@ -57,7 +59,8 @@ namespace Puzzle.ViewModel
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<MainViewModel>();
+                return ServiceLocator.Current.GetInstance <MainViewModel>();
+            
             }
         }
 

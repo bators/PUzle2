@@ -12,13 +12,13 @@
         MaxWidth="600"
         MaxHeight="480"
         DataContext="{Binding Source={StaticResource Locator},
-                              Path=main}">
+                              Path=Main}">
     <Window.Resources>
         <LinearGradientBrush x:Key="bgnd" StartPoint="0 .5">
             <GradientStop Offset="0.2" Color="White" />
             <GradientStop Offset="0.9" Color="Gray" />
         </LinearGradientBrush>
-   
+
 
 
         <LinearGradientBrush x:Key="placement" StartPoint="0, 0">
@@ -40,8 +40,7 @@
                 </Setter.Value>
 
             </Setter>
-            <!--<EventSetter Event="Drop" Handler="DropImage" />
-            <EventSetter Event="PreviewMouseLeftButtonDown" Handler="imageControl_MouseLeftButtonDown" />-->
+          
         </Style>
 
     </Window.Resources>
@@ -59,13 +58,20 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
+            <RowDefinition Height="8*" />
 
         </Grid.RowDefinitions>
-        <view:UserControl1 Grid.Column="0"
+
+        <Menu>
+            <MenuItem Header="Файл">
+                <MenuItem Command="{Binding Path=ButSavePuzzle}" Header="Сохранить в файл" />
+            </MenuItem>
+        </Menu>
+        <view:UserControl1 Grid.Row="1"
+                           Grid.Column="0"
                            Margin="5"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Stretch" />
-        <view:UserControl2 Grid.Column="1" />
-
+        <view:UserControl2 Grid.Row="1" Grid.Column="1" />
     </Grid>
 </Window>

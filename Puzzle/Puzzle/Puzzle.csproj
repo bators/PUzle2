@@ -75,19 +75,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\Fordrop.cs" />
     <Compile Include="Model\Fragment.cs" />
     <Compile Include="Model\FragmentCreator.cs" />
     <Compile Include="Model\Coppy.cs" />
+    <Compile Include="Model\Interface\AbstractBridge.cs" />
     <Compile Include="Model\Interface\ICreateFragment.cs" />
-    <Compile Include="Model\ItemModel.cs" />
+    <Compile Include="Model\Interface\Idatabridge.cs" />
+    <Compile Include="Model\Interface\IImageHolder.cs" />
     <Compile Include="View\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserControl2.xaml.cs">
       <DependentUpon>UserControl2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\ControlViewModel.cs" />
     <Compile Include="ViewModel\DragAndDrop.cs" />
     <Compile Include="ViewModel\Drop.cs" />
     <Compile Include="ViewModel\ImageConverter.cs" />
@@ -145,13 +145,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Img\1I32JTLXK0IU1321647500323.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Img\111.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Img\1.png" />
+    <Resource Include="Img\444.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

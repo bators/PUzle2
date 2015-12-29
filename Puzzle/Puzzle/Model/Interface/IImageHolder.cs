@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Puzzle.Model.Interface
 {
-   public  interface ICreateFragment
-    {
-        void CreatFragment();
-      
+  public   interface IImageHolder
+  {
+      IEnumerable<Fragment> GetImgPuzzles(int rows, int columns);
+      bool SaveImg(string pathImg);
     }
 }
